@@ -1,0 +1,1 @@
+export { isDotEnvExists } from './isDotEnvExists';
