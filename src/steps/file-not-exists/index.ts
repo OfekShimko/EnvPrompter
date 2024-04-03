@@ -1,0 +1,1 @@
+export { generateEnvFile } from './generateEnvFile';
