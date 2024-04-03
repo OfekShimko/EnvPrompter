@@ -1,0 +1,1 @@
+export { isFileValid } from './isFileValid';
