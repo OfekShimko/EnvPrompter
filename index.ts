@@ -14,5 +14,3 @@ const main = async () => {
         await generateEnvFile(envFilePath, configFile)
     }
 }
-
-main().then()
