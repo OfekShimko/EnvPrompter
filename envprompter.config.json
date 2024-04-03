@@ -1,0 +1,9 @@
+{
+    "variables": [
+        {
+            "name": "username",
+            "prompt": "Please enter username",
+            "required": true
+        }
+    ] 
+}
