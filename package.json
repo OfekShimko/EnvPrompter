@@ -17,5 +17,8 @@
   },
   "dependencies": {
     "enquirer": "^2.4.1"
+  },
+  "bin": {
+    "envprompter": "./dist/index.js"
   }
 }

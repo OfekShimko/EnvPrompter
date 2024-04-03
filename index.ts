@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { readConfigFile } from "./src/read-config-file";
 import { isDotEnvExists } from "./src/steps/explore-env";
 import { generateEnvFile } from "./src/steps/file-not-exists";
@@ -14,3 +16,5 @@ const main = async () => {
         await generateEnvFile(envFilePath, configFile)
     }
 }
+
+main();
