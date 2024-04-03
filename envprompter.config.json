@@ -1,9 +1,14 @@
 {
     "variables": [
         {
-            "name": "username",
-            "prompt": "Please enter username",
+            "name": "example",
+            "prompt": "Please enter example value",
             "required": true
+        },
+        {
+            "name": "not required field",
+            "prompt": "Please enter not required field",
+            "required": false
         }
     ] 
 }
