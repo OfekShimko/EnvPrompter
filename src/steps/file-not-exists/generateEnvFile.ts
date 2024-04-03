@@ -5,7 +5,8 @@ import { writeFile } from 'fs';
 export const generateEnvFile = async (filePath: string, configFile: Config) => {
     const valuesToKeys = await getValuesForKeys(configFile);
     const content = Object.entries(valuesToKeys)
-    .map(([key, value]) => `${key}=${value}`)
+    .map(([key, value]) => value ? `${key}=${value}` : false)
+    .filter(Boolean)
     .join('\n');
 
   writeFile(filePath, content, (err) => {
