@@ -7,10 +7,9 @@ const envFilePath = join(process.cwd(), '.env');
 
 const main = async () => {
     const configFile = readConfigFile();
-    console.log({configFile})
     const isDotEnvInRoot = isDotEnvExists(envFilePath);
     if(isDotEnvInRoot){
-        console.log({ isDotEnvInRoot })
+        console.log('.env file found');
     }else{
         await generateEnvFile(envFilePath, configFile)
     }
