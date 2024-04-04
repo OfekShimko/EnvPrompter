@@ -1,3 +1,3 @@
-export const isFileValid = () => {
-    return true;
-}
+export const isFileValid = (): boolean => {
+  return true;
+};
