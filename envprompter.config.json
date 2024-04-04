@@ -2,13 +2,12 @@
     "variables": [
         {
             "name": "example",
-            "prompt": "Please enter example value",
-            "required": true
+            "prompt": "Please enter example value"
         },
         {
-            "name": "not required field",
-            "prompt": "Please enter not required field",
-            "required": false
+            "name": "optional field",
+            "prompt": "Please enter optional field",
+            "optional": true
         }
     ] 
 }

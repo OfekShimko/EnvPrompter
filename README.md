@@ -31,12 +31,11 @@ yarn global add envprompter
         {
             "name": "example",
             "prompt": "Please enter the example value",
-            "required": true
         },
         {
-            "name": "not required field",
-            "prompt": "Please enter a value for the not required field",
-            "required": false
+            "name": "optional field",
+            "prompt": "Please enter a value for the optional field",
+            "optional": true
         }
     ]
 }
