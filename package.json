@@ -32,5 +32,8 @@
   },
   "bin": {
     "envprompter": "./dist/index.js"
-  }
-}
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ]
