@@ -1,9 +1,9 @@
-export type Variable = {
-    name: string;
-    prompt: string;
-    optional?: boolean;
-};
+export interface Variable {
+  name: string
+  prompt: string
+  optional?: boolean
+}
 
-export type Config = {
-    variables: Variable[];
-};
+export interface Config {
+  variables: Variable[]
+}

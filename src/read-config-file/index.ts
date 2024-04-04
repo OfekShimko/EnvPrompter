@@ -1,2 +1,2 @@
-export { readConfigFile } from './readConfigFile';
-export { Config, Variable } from './types';
+export { readConfigFile } from './readConfigFile'
+export type { Config, Variable } from './types'
