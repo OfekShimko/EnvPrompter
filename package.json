@@ -25,12 +25,17 @@
     "start": "node dist/index.js",
     "test": "mocha",
     "lint": "eslint ./src/**/**/*.ts",
-    "lint:fix": "eslint ./src/**/**/*.ts --fix"
+    "lint:fix": "eslint ./src/**/**/*.ts --fix",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "enquirer": "^2.4.1"
   },
   "bin": {
     "envprompter": "./dist/index.js"
-  }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ]
 }
