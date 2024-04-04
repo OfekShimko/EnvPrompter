@@ -6,7 +6,6 @@ interface Question {
   name: string
   message: string
 }
-type EnvValues = Record<string, string | undefined>;
 
 const composeQuestion = ({ prompt, optional }: Pick<Variable, 'prompt' | 'optional'>) => {
   if (optional) {
@@ -25,7 +24,7 @@ const getQuestions = (configFile: Config): Question[] => {
   }));
 };
 
-export const getValuesForKeys = async (configFile: Config): Promise<EnvValues> => {
+export const getValuesForKeys = async (configFile: Config) => {
   const questions = getQuestions(configFile);
   const answers = await prompt(questions);
   return answers;
