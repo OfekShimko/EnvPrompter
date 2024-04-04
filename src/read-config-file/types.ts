@@ -1,7 +1,7 @@
 export type Variable = {
     name: string;
     prompt: string;
-    required: boolean;
+    optional?: boolean;
 };
 
 export type Config = {

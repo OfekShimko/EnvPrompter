@@ -1,17 +1,20 @@
 import { prompt } from 'enquirer';
 import { Config, Variable } from '../../read-config-file';
 
-const composeQuestion = ({prompt, required}: Pick<Variable, 'prompt' | 'required'>) => {
-    return prompt + ` (${required ? 'required' : 'not required'})`;
+const composeQuestion = ({prompt, optional}: Pick<Variable, 'prompt' | 'optional'>) => {
+    if(optional){
+        return  prompt + ' (optional)'
+    }
+    return prompt;
 };
 
 const getQuestions = (configFile: Config) => {
     const { variables } = configFile;
 
-    return variables.map(({name, prompt, required}) => ({
+    return variables.map(({name, prompt, optional}) => ({
         type: 'input',
         name,
-        message: composeQuestion({prompt, required})
+        message: composeQuestion({prompt, optional})
     }));
 };
 
