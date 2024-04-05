@@ -12,6 +12,7 @@ export const generateEnvFile = async (filePath: string, configFile: Config): Pro
   writeFile(filePath, content, (err) => {
     if (err !== null) {
       console.error('Error writing .env file', err);
+      process.exit(1);
     } else {
       console.log('.env file created successfully');
     }
