@@ -1,5 +1,5 @@
 {
-  "name": "EnvPrompter",
+  "name": "envprompter",
   "version": "0.0.1",
   "main": "index.js",
   "repository": "git@github.com:OfekShimko/EnvPrompter.git",
@@ -26,7 +26,7 @@
     "test": "mocha",
     "lint": "eslint ./src/**/**/*.ts",
     "lint:fix": "eslint ./src/**/**/*.ts --fix",
-    "prepublishOnly": "npm run build"
+    "publish": "bash ./publish"
   },
   "dependencies": {
     "enquirer": "^2.4.1"
