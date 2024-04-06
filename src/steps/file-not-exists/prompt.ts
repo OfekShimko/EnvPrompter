@@ -1,27 +1,33 @@
 import { prompt } from 'enquirer';
 import { type Config, type Variable } from '../../read-config-file';
 
+export const optionalQuestionValeSuffix = '(optional)';
+
 interface Question {
   type: string
   name: string
   message: string
 }
 
-const composeQuestion = ({ prompt, optional }: Pick<Variable, 'prompt' | 'optional'>) => {
+export const composeMessage = ({ prompt, optional }: Pick<Variable, 'prompt' | 'optional'>) => {
   if (optional) {
-    return prompt + ' (optional)';
+    return prompt + ` ${optionalQuestionValeSuffix}`;
   }
   return prompt;
 };
 
-const getQuestions = (configFile: Config): Question[] => {
-  const { variables } = configFile;
 
-  return variables.map(({ name, prompt, optional }) => ({
+export const composeQuestion = ({ name, prompt, optional }: Variable) => {
+ return {
     type: 'input',
     name,
-    message: composeQuestion({ prompt, optional })
-  }));
+    message: composeMessage({ prompt, optional })
+  };
+};
+
+const getQuestions = (configFile: Config): Question[] => {
+  const { variables } = configFile;
+  return variables.map(composeQuestion);
 };
 
 export const getValuesForKeys = async (configFile: Config) => {

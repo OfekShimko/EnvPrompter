@@ -17,7 +17,7 @@ if yarn test && yarn lint && yarn build; then
     
     # Publish the package to npm
     npm publish --registry=https://registry.npmjs.org/
-    
+    npm username --registry=https://registry.npmjs.org/
     # Optionally, create a release notes file or gather information for release notes
     echo "Enter release notes, followed by [CTRL+D]:"
     cat > "$release_notes"
