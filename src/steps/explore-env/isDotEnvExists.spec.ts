@@ -1,7 +1,7 @@
 import assert from "assert";
 
-describe("Example Test", () => {
-  it("should return true", () => {
+describe("Test composeQuestion", () => {
+  it("should return valid question object", () => {
     assert.strictEqual(true, true);
   });
 });
